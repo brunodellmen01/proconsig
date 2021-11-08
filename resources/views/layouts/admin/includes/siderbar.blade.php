@@ -6,16 +6,22 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button">
-                            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">Dashboards</span> <div class="arrow-down"></div>
+                        <a class="nav-link arrow-none" href="#" id="topnav-dashboard" role="button">
+                            <i class="bx bx-home-circle me-2"></i><span key="t-dashboards">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link arrow-none" href="#" id="topnav-dashboard" role="button">
+                            <i class="bx bxs-file-doc me-2"></i><span key="t-dashboards">Contratos</span>
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-uielement" role="button"
                         >
-                            <i class="bx bx-tone me-2"></i>
-                            <span key="t-ui-elements"> UI Elements</span>
+                        <i class="fas fa-file-csv"></i>
+                            <span key="t-ui-elements">Mailing</span>
                             <div class="arrow-down"></div>
                         </a>
 
@@ -24,37 +30,9 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div>
-                                        <a href="ui-alerts.html" class="dropdown-item" key="t-alerts">Alerts</a>
-                                        <a href="ui-buttons.html" class="dropdown-item" key="t-buttons">Buttons</a>
-                                        <a href="ui-cards.html" class="dropdown-item" key="t-cards">Cards</a>
-                                        <a href="ui-carousel.html" class="dropdown-item" key="t-carousel">Carousel</a>
-                                        <a href="ui-dropdowns.html" class="dropdown-item" key="t-dropdowns">Dropdowns</a>
-                                        <a href="ui-grid.html" class="dropdown-item" key="t-grid">Grid</a>
-                                        <a href="ui-images.html" class="dropdown-item" key="t-images">Images</a>
-                                        <a href="ui-lightbox.html" class="dropdown-item" key="t-lightbox">Lightbox</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div>
-                                        <a href="ui-modals.html" class="dropdown-item" key="t-modals">Modals</a>
-                                        <a href="ui-offcanvas.html" class="dropdown-item" key="t-offcanvas">Offcanvas</a>
-                                        <a href="ui-rangeslider.html" class="dropdown-item" key="t-range-slider">Range Slider</a>
-                                        <a href="ui-session-timeout.html" class="dropdown-item" key="t-session-timeout">Session Timeout</a>
-                                        <a href="ui-progressbars.html" class="dropdown-item" key="t-progress-bars">Progress Bars</a>
-                                        <a href="ui-placeholders.html" class="dropdown-item" key="t-placeholders">Placeholders</a>
-                                        <a href="ui-sweet-alert.html" class="dropdown-item" key="t-sweet-alert">Sweet-Alert</a>
-                                        <a href="ui-tabs-accordions.html" class="dropdown-item" key="t-tabs-accordions">Tabs & Accordions</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div>
-                                        <a href="ui-typography.html" class="dropdown-item" key="t-typography">Typography</a>
-                                        <a href="ui-toasts.html" class="dropdown-item" key="t-toasts">Toasts</a>
-                                        <a href="ui-video.html" class="dropdown-item" key="t-video">Video</a>
-                                        <a href="ui-general.html" class="dropdown-item" key="t-general">General</a>
-                                        <a href="ui-colors.html" class="dropdown-item" key="t-colors">Colors</a>
-                                        <a href="ui-rating.html" class="dropdown-item" key="t-rating">Rating</a>
-                                        <a href="ui-notifications.html" class="dropdown-item" key="t-notifications">Notifications</a>
+                                        <a href="ui-alerts.html" class="dropdown-item" key="t-alerts">Listar</a>
+                                        <a href="ui-buttons.html" class="dropdown-item" key="t-buttons">Importar</a>
+
                                     </div>
                                 </div>
                             </div>
@@ -65,7 +43,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button"
                         >
-                            <i class="bx bx-customize me-2"></i><span key="t-apps">Apps</span> <div class="arrow-down"></div>
+                        <i class="fas fa-chart-line"></i></i><span key="t-apps"> Relatórios</span> <div class="arrow-down"></div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-pages">
 
@@ -190,7 +168,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button"
                         >
-                            <i class="bx bx-collection me-2"></i><span key="t-components">Components</span> <div class="arrow-down"></div>
+                        <i class="fas fa-users"></i></i><span key="t-components">Usuários</span> <div class="arrow-down"></div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-components">
                             <div class="dropdown">
@@ -267,7 +245,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-more" role="button"
                         >
-                            <i class="bx bx-file me-2"></i><span key="t-extra-pages">Extra pages</span> <div class="arrow-down"></div>
+                        <i class="fas fa-cogs"></i><span key="t-extra-pages">Configurações</span> <div class="arrow-down"></div>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="topnav-more">
                             <div class="dropdown">
@@ -316,45 +294,6 @@
                                     <a href="pages-pricing.html" class="dropdown-item" key="t-pricing">Pricing</a>
                                     <a href="pages-404.html" class="dropdown-item" key="t-error-404">Error 404</a>
                                     <a href="pages-500.html" class="dropdown-item" key="t-error-500">Error 500</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-layout" role="button"
-                        >
-                            <i class="bx bx-layout me-2"></i><span key="t-layouts">Layouts</span> <div class="arrow-down"></div>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="topnav-layout">
-                            <div class="dropdown">
-                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-layout-verti"
-                                    role="button">
-                                    <span key="t-vertical">Vertical</span> <div class="arrow-down"></div>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="topnav-layout-verti">
-                                    <a href="layouts-light-sidebar.html" class="dropdown-item" key="t-light-sidebar">Light Sidebar</a>
-                                    <a href="layouts-compact-sidebar.html" class="dropdown-item" key="t-compact-sidebar">Compact Sidebar</a>
-                                    <a href="layouts-icon-sidebar.html" class="dropdown-item" key="t-icon-sidebar">Icon Sidebar</a>
-                                    <a href="layouts-boxed.html" class="dropdown-item" key="t-boxed-width">Boxed Width</a>
-                                    <a href="layouts-preloader.html" class="dropdown-item" key="t-preloader">Preloader</a>
-                                    <a href="layouts-colored-sidebar.html" class="dropdown-item" key="t-colored-sidebar">Colored Sidebar</a>
-                                    <a href="layouts-scrollable.html" class="dropdown-item" key="t-scrollable">Scrollable</a>
-                                </div>
-                            </div>
-
-                            <div class="dropdown">
-                                <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-layout-hori"
-                                    role="button">
-                                    <span key="t-horizontal">Horizontal</span> <div class="arrow-down"></div>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="topnav-layout-hori">
-                                    <a href="layouts-horizontal.html" class="dropdown-item" key="t-horizontal">Horizontal</a>
-                                    <a href="layouts-hori-topbar-light.html" class="dropdown-item" key="t-topbar-light">Topbar light</a>
-                                    <a href="layouts-hori-boxed-width.html" class="dropdown-item" key="t-boxed-width">Boxed width</a>
-                                    <a href="layouts-hori-preloader.html" class="dropdown-item" key="t-preloader">Preloader</a>
-                                    <a href="layouts-hori-colored-header.html" class="dropdown-item" key="t-colored-topbar">Colored Header</a>
-                                    <a href="layouts-hori-scrollable.html" class="dropdown-item" key="t-scrollable">Scrollable</a>
                                 </div>
                             </div>
                         </div>

@@ -23,6 +23,7 @@
             <!-- ============================================================== -->
             @yield('content')
             <!-- end main content-->
+            @include('layouts.admin.includes.footer')
 
         </div>
         <!-- END layout-wrapper -->
