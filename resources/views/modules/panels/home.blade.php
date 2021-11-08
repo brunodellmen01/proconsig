@@ -139,7 +139,7 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
-                                                <p class="text-muted fw-medium">Contratos </p>
+                                                <p class="text-muted fw-medium">10 Contratos </p>
                                                 <h4 class="mb-0">R$15.000,00</h4>
                                                 <span class="badge rounded-pill bg-info float-end"
                                                     key="t-new">Digitado</span>
