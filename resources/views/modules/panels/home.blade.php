@@ -181,7 +181,7 @@
                         </div>
                         <!-- end row -->
 
-                        <div class="col-xl-8">
+                        <div class="col-xl-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="clearfix">
@@ -196,21 +196,15 @@
                                                 <label class="input-group-text">Month</label>
                                             </div>
                                         </div>
-                                        <h4 class="card-title mb-4">Earning</h4>
+                                        <h4 class="card-title mb-4">Produção</h4>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-lg-4">
+                                        <div class="col-lg-2">
                                             <div class="text-muted">
                                                 <div class="mb-4">
                                                     <p>Mês atual</p>
                                                     <h4>R$2453</h4>
-                                                </div>
-
-                                                <div>
-                                                    <a href="javascript: void(0);"
-                                                        class="btn btn-primary waves-effect waves-light btn-sm">View
-                                                        Details <i class="mdi mdi-chevron-right ms-1"></i></a>
                                                 </div>
 
                                                 <div class="mt-4">
@@ -221,7 +215,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-8">
+                                        <div class="col-lg-10">
                                             <div id="line-chart" class="apex-charts" dir="ltr"
                                                 style="min-height: 335px;">
                                                 <div id="apexcharts0trf65jfi"

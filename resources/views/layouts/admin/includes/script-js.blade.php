@@ -30,3 +30,6 @@
 
 <!-- Datatable init js -->
 <script src="{{ asset('assets/js/pages/datatables.init.js') }}"></script>
+
+<!-- auth-2-carousel init -->
+<script src="{{ asset('assets/js/pages/auth-2-carousel.init.js') }}"></script>
