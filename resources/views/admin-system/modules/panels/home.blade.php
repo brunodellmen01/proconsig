@@ -96,9 +96,9 @@
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
                                                 <p class="text-muted fw-medium">Empresas</p>
-                                                <h4 class="mb-0">150</h4>
+                                                <h4 class="mb-0">{{$companiesDayCurrent}}</h4>
                                                 <span class="badge rounded-pill bg-warning float-end"
-                                                    key="t-new">novo</span>
+                                                    key="t-new">hoje</span>
                                             </div>
 
                                             <div class="flex-shrink-0 align-self-center">
@@ -118,7 +118,7 @@
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
                                                 <p class="text-muted fw-medium">Empresas</p>
-                                                <h4 class="mb-0">20</h4>
+                                                <h4 class="mb-0">{{$companiesMonthCurrent}}</h4>
                                                 <span class="badge rounded-pill bg-danger float-end" key="t-new">mês atual</span>
                                             </div>
 
@@ -139,9 +139,9 @@
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
                                                 <p class="text-muted fw-medium">Empresas </p>
-                                                <h4 class="mb-0">60</h4>
+                                                <h4 class="mb-0">{{$companiesWeekCurrent}}</h4>
                                                 <span class="badge rounded-pill bg-info float-end"
-                                                    key="t-new">mês anterior</span>
+                                                    key="t-new">semana atual</span>
                                             </div>
 
                                             <div class="flex-shrink-0 align-self-center">
@@ -161,7 +161,7 @@
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
                                                 <p class="text-muted fw-medium">Empresas</p>
-                                                <h4 class="mb-0">57</h4>
+                                                <h4 class="mb-0">{{$totalCompaniesActive}}</h4>
                                                 <span class="badge rounded-pill bg-success float-end"
                                                     key="t-new">total</span>
                                             </div>
@@ -703,21 +703,17 @@
 
 
                                     <tbody>
+                                        @forelse ($lastSales as $ls)
                                         <tr>
-                                            <td>5214</td>
-                                            <td>Crefisa</td>
-                                            <td>leila@crefisa.com</td>
+                                            <td>{{$ls->code}}</td>
+                                            <td>{{$ls->company_name}}</td>
+                                            <td>{{$ls->email}}</td>
                                         </tr>
+                                        @empty
                                         <tr>
-                                            <td>7612</td>
-                                            <td>Marcred</td>
-                                            <td>adm@marcred.com</td>
+                                            <td>Sem registros!</td>
                                         </tr>
-                                        <tr>
-                                            <td>4590</td>
-                                            <td>Sulcred</td>
-                                            <td>adm@sulcred.com</td>
-                                        </tr>
+                                        @endforelse
                                     </tbody>
                                 </table>
                             </div>

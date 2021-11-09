@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Companies;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class AdminSystemController extends Controller
@@ -13,7 +15,18 @@ class AdminSystemController extends Controller
      */
     public function index()
     {
-        return view('admin-system.modules.panels.home');
+        $today = Carbon::today()->format('Y-m-d');
+        $weekStartDate = Carbon::now()->startOfWeek();
+        $weekEndDate = Carbon::now()->endOfWeek();
+        $month = date('m');
+
+        $companiesDayCurrent = Companies::whereBetween('created_at', [$today.' 00:00:00', $today.' 23:00:00'])->count();
+        $totalCompaniesActive = Companies::where('status_id', 4)->count();
+        $companiesMonthCurrent = Companies::whereRaw("MONTH(created_at)={$month}")->count();
+        $companiesWeekCurrent = Companies::whereBetween('created_at', [$weekStartDate, $weekEndDate])->count();
+
+        $lastSales = Companies::orderByDesc('created_at')->limit(5)->get();
+        return view('admin-system.modules.panels.home', compact('companiesDayCurrent', 'totalCompaniesActive', 'companiesMonthCurrent', 'companiesWeekCurrent', 'lastSales'));
     }
 
     /**
