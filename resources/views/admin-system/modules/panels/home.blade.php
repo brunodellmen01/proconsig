@@ -30,7 +30,7 @@
                                     <div class="col-7">
                                         <div class="text-primary p-3">
                                             <h5 class="text-primary">Pesquisar cliente</h5>
-                                            <p>CPF - ID - Beneficio</p>
+                                            <p>ID da empresa</p>
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
@@ -54,7 +54,7 @@
                                         <div class="pt-4">
                                             <div class="mt-4">
                                                 <input type="text" class="form-control" id="billing-name"
-                                                    placeholder="Digite CPF, ID Proconsig ou Benefício">
+                                                    placeholder="ID Proconsig">
                                                 <br>
                                                 <a href="javascript: void(0);"
                                                     class="btn btn-primary waves-effect waves-light btn-sm">Pesquisar<i
