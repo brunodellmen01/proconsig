@@ -23,10 +23,15 @@ class User extends Authenticatable
         'email',
         'password',
         'role_id',
+        'gender',
+        'birthday',
+        'phone',
+        'status_id'
     ];
 
     /**
      * The attributes that should be hidden for serialization.
+     * $table->string('document')->nullable()->after('role_id');
      *
      * @var array
      */

@@ -1,94 +1,107 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
+<head>
 
-        @include('layouts.admin.includes.head')
+    @include('layouts.admin.includes.head')
 
-    </head>
+</head>
 
-    <body data-topbar="dark" data-layout="horizontal">
+<body data-topbar="dark" data-layout="horizontal">
 
-        <!-- Begin page -->
-        <div id="layout-wrapper">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
 
-            <header id="page-topbar">
+        <header id="page-topbar">
+            @if (Auth::user()->role_id == 1)
+                @include('layouts.admin.includes.header-admin')
+            @else
                 @include('layouts.admin.includes.header')
-            </header>
+            @endif
+        </header>
 
+        @if (Auth::user()->role_id == 1)
+            @include('layouts.admin.includes.siderbar-admin')
+        @else
             @include('layouts.admin.includes.siderbar')
+        @endif
 
-            <!-- ============================================================== -->
-            <!-- Start right Content here -->
-            <!-- ============================================================== -->
-            @yield('content')
-            <!-- end main content-->
-            @include('layouts.admin.includes.footer')
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        @yield('content')
+        <!-- end main content-->
+        @include('layouts.admin.includes.footer')
 
-        </div>
-        <!-- END layout-wrapper -->
+    </div>
+    <!-- END layout-wrapper -->
 
-        <!-- Right Sidebar -->
-        <div class="right-bar">
-            <div data-simplebar class="h-100">
-                <div class="rightbar-title d-flex align-items-center px-3 py-4">
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div data-simplebar class="h-100">
+            <div class="rightbar-title d-flex align-items-center px-3 py-4">
 
-                    <h5 class="m-0 me-2">Settings</h5>
+                <h5 class="m-0 me-2">Settings</h5>
 
-                    <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
-                        <i class="mdi mdi-close noti-icon"></i>
-                    </a>
+                <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                    <i class="mdi mdi-close noti-icon"></i>
+                </a>
+            </div>
+
+            <!-- Settings -->
+            <hr class="mt-0" />
+            <h6 class="text-center mb-0">Choose Layouts</h6>
+
+            <div class="p-4">
+                <div class="mb-2">
+                    <img src="{{ asset('assets/images/layouts/layout-1.jpg') }}" class="img-thumbnail"
+                        alt="layout images">
                 </div>
 
-                <!-- Settings -->
-                <hr class="mt-0" />
-                <h6 class="text-center mb-0">Choose Layouts</h6>
-
-                <div class="p-4">
-                    <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-1.jpg') }}" class="img-thumbnail" alt="layout images">
-                    </div>
-
-                    <div class="form-check form-switch mb-3">
-                        <input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
-                        <label class="form-check-label" for="light-mode-switch">Light Mode</label>
-                    </div>
-
-                    <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-2.jpg') }}" class="img-thumbnail" alt="layout images">
-                    </div>
-                    <div class="form-check form-switch mb-3">
-                        <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch">
-                        <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
-                    </div>
-
-                    <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-3.jpg') }}" class="img-thumbnail" alt="layout images">
-                    </div>
-                    <div class="form-check form-switch mb-3">
-                        <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch">
-                        <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
-                    </div>
-
-                    <div class="mb-2">
-                        <img src="{{ asset('assets/images/layouts/layout-4.jpg') }}" class="img-thumbnail" alt="layout images">
-                    </div>
-                    <div class="form-check form-switch mb-5">
-                        <input class="form-check-input theme-choice" type="checkbox" id="dark-rtl-mode-switch">
-                        <label class="form-check-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
-                    </div>
-
-
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="light-mode-switch" checked>
+                    <label class="form-check-label" for="light-mode-switch">Light Mode</label>
                 </div>
 
-            </div> <!-- end slimscroll-menu-->
-        </div>
-        <!-- /Right-bar -->
+                <div class="mb-2">
+                    <img src="{{ asset('assets/images/layouts/layout-2.jpg') }}" class="img-thumbnail"
+                        alt="layout images">
+                </div>
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="dark-mode-switch">
+                    <label class="form-check-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
 
-        <!-- Right bar overlay-->
-        <div class="rightbar-overlay"></div>
+                <div class="mb-2">
+                    <img src="{{ asset('assets/images/layouts/layout-3.jpg') }}" class="img-thumbnail"
+                        alt="layout images">
+                </div>
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input theme-choice" type="checkbox" id="rtl-mode-switch">
+                    <label class="form-check-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
 
-        <!-- JAVASCRIPT -->
-        @include('layouts.admin.includes.script-js')
-    </body>
+                <div class="mb-2">
+                    <img src="{{ asset('assets/images/layouts/layout-4.jpg') }}" class="img-thumbnail"
+                        alt="layout images">
+                </div>
+                <div class="form-check form-switch mb-5">
+                    <input class="form-check-input theme-choice" type="checkbox" id="dark-rtl-mode-switch">
+                    <label class="form-check-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                </div>
+
+
+            </div>
+
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    @include('layouts.admin.includes.script-js')
+</body>
+
 </html>

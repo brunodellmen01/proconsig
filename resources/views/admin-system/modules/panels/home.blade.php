@@ -95,16 +95,16 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
-                                                <p class="text-muted fw-medium">10 Contratos</p>
-                                                <h4 class="mb-0">R$15.000,00</h4>
+                                                <p class="text-muted fw-medium">Empresas</p>
+                                                <h4 class="mb-0">150</h4>
                                                 <span class="badge rounded-pill bg-warning float-end"
-                                                    key="t-new">Transmitido</span>
+                                                    key="t-new">novo</span>
                                             </div>
 
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="mini-stat-icon avatar-sm rounded-circle bg-primary">
                                                     <span class="avatar-title">
-                                                        <i class="fas fa-file-contract fa-2x"></i>
+                                                        <i class="far fa-building fa-2x"></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -117,16 +117,15 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
-                                                <p class="text-muted fw-medium">10 Contratos</p>
-                                                <h4 class="mb-0">R$15.000,00</h4>
-                                                <span class="badge rounded-pill bg-danger float-end" key="t-new">Aguardando
-                                                    Digitação</span>
+                                                <p class="text-muted fw-medium">Empresas</p>
+                                                <h4 class="mb-0">20</h4>
+                                                <span class="badge rounded-pill bg-danger float-end" key="t-new">mês atual</span>
                                             </div>
 
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="avatar-sm rounded-circle bg-primary mini-stat-icon">
                                                     <span class="avatar-title rounded-circle bg-primary">
-                                                        <i class="fas fa-file-contract fa-2x"></i>
+                                                        <i class="far fa-building fa-2x"></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -139,16 +138,16 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
-                                                <p class="text-muted fw-medium">10 Contratos </p>
-                                                <h4 class="mb-0">R$15.000,00</h4>
+                                                <p class="text-muted fw-medium">Empresas </p>
+                                                <h4 class="mb-0">60</h4>
                                                 <span class="badge rounded-pill bg-info float-end"
-                                                    key="t-new">Digitado</span>
+                                                    key="t-new">mês anterior</span>
                                             </div>
 
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="avatar-sm rounded-circle bg-primary mini-stat-icon">
                                                     <span class="avatar-title rounded-circle bg-primary">
-                                                        <i class="fas fa-file-contract fa-2x"></i>
+                                                        <i class="far fa-building fa-2x"></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -161,16 +160,16 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
-                                                <p class="text-muted fw-medium">10 Contratos</p>
-                                                <h4 class="mb-0">R$15.000,00</h4>
+                                                <p class="text-muted fw-medium">Empresas</p>
+                                                <h4 class="mb-0">57</h4>
                                                 <span class="badge rounded-pill bg-success float-end"
-                                                    key="t-new">Pagos</span>
+                                                    key="t-new">total</span>
                                             </div>
 
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="avatar-sm rounded-circle bg-primary mini-stat-icon">
                                                     <span class="avatar-title rounded-circle bg-primary">
-                                                        <i class="fas fa-file-contract fa-2x"></i>
+                                                        <i class="far fa-building fa-2x"></i>
                                                     </span>
                                                 </div>
                                             </div>
@@ -697,163 +696,27 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Nome</th>
-                                            <th>Produto</th>
-                                            <th>Status</th>
-                                            <th>Vendedor</th>
-                                            <th>Valor</th>
+                                            <th>Empresa</th>
+                                            <th>E-mail</th>
                                         </tr>
                                     </thead>
 
 
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>5214</td>
+                                            <td>Crefisa</td>
+                                            <td>leila@crefisa.com</td>
                                         </tr>
                                         <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
+                                            <td>7612</td>
+                                            <td>Marcred</td>
+                                            <td>adm@marcred.com</td>
                                         </tr>
                                         <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>New York</td>
-                                            <td>61</td>
-                                            <td>2012/12/02</td>
-                                            <td>$372,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Herrod Chandler</td>
-                                            <td>Sales Assistant</td>
-                                            <td>San Francisco</td>
-                                            <td>59</td>
-                                            <td>2012/08/06</td>
-                                            <td>$137,500</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div> <!-- end col -->
-
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Ranking Produção Campanha</h4>
-                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
-                                    <thead>
-                                        <tr>
-                                            <th>Posição</th>
-                                            <th>Nome</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                    </thead>
-
-
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Edinburgh</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div> <!-- end col -->
-
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Ranking Pagos Campanha</h4>
-                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
-                                    <thead>
-                                        <tr>
-                                            <th>Posição</th>
-                                            <th>Nome</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                    </thead>
-
-
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Edinburgh</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div> <!-- end col -->
-
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Ranking Produção</h4>
-                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
-                                    <thead>
-                                        <tr>
-                                            <th>Posição</th>
-                                            <th>Nome</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                    </thead>
-
-
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Edinburgh</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div> <!-- end col -->
-
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Ranking Pagos</h4>
-                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
-                                    <thead>
-                                        <tr>
-                                            <th>Posição</th>
-                                            <th>Nome</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                    </thead>
-
-
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Edinburgh</td>
-                                            <td>$320,800</td>
+                                            <td>4590</td>
+                                            <td>Sulcred</td>
+                                            <td>adm@sulcred.com</td>
                                         </tr>
                                     </tbody>
                                 </table>
