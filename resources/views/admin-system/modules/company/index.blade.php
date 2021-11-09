@@ -57,7 +57,7 @@
                                             <td>{{$company->code}}</td>
                                             <td>{{$company->fantasy_name}}</td>
                                             <td>{{$company->responsible_name}}</td>
-                                            <td>{{$company->email}}61</td>
+                                            <td>{{$company->email}}</td>
                                             <td>{{$company->status->name}}</td>
                                             <td>{{formatDateToView($company->created_at)}}</td>
                                             <td class="text-right">
