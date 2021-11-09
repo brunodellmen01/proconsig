@@ -18,11 +18,10 @@ class CompaniesController extends Controller
     protected $adresses;
 
 
-    public function __construct(CompaniesRepository $companies, UsersRepository $users, AdressesRepository $adresses)
+    public function __construct(CompaniesRepository $companies, UsersRepository $users)
     {
         $this->companies = $companies;
         $this->users= $users;
-		$this->adresses= $adresses;
 
     }
 

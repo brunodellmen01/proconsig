@@ -6,13 +6,13 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item">
-                        <a class="nav-link arrow-none" href="#" id="topnav-dashboard" role="button">
+                        <a class="nav-link arrow-none" href="{{url('/crm')}}" id="topnav-dashboard" role="button">
                             <i class="fas fa-tachometer-alt"></i><span key="t-dashboards"> Dashboard</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link arrow-none" href="#" id="topnav-dashboard" role="button">
+                        <a class="nav-link arrow-none" href="{{route('companies.index')}}" id="topnav-dashboard" role="button">
                             <i class="fas fa-building"></i></i><span key="t-dashboards"> Empresas</span>
                         </a>
                     </li>

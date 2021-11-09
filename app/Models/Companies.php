@@ -12,6 +12,7 @@ class Companies extends Model
 
     protected $fillable = [
         'uuid',
+        'code',
         'fantasy_name',
         'company_name',
         'document',
@@ -28,4 +29,18 @@ class Companies extends Model
         'coefficient_id',
         'date_cancell'
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($query) {
+            $query->code = substr(uniqid(rand()), 0, 6);
+        });
+    }
+
+    public function status()
+    {
+        return $this->belongsTo(\App\Models\Status::class, 'status_id')->withTrashed();
+    }
 }

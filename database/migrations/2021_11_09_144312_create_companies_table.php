@@ -32,6 +32,7 @@ class CreateCompaniesTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->longText('uuid');
+            $table->string('code', 8);
             $table->string('fantasy_name')->nullable();
             $table->string('company_name')->nullable();
             $table->string('document')->nullable();
