@@ -3,7 +3,7 @@
 
 <head>
 
-    @include('layouts.admin.includes.head')
+    @include('layouts.system.includes.head')
 
 </head>
 
@@ -141,7 +141,7 @@
     </div>
 
     <!-- JAVASCRIPT -->
-    @include('layouts.admin.includes.script-js')
+    @include('layouts.system.includes.script-js')
 
 </body>
 

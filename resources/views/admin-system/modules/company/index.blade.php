@@ -1,4 +1,4 @@
-@extends('layouts.admin.app')
+@extends('layouts.system.app')
 @section('content')
     <div class="main-content">
 
@@ -16,7 +16,7 @@
 
                     <div class="col-sm-4">
                         <div class="text-sm-end">
-                            <button href="{{ route('companies.create') }}" type="button" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Adicionar</button>
+                            <a href="{{ route('companies.create') }}" type="button" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Adicionar</a>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                     <div class="col-lg-12">
                         <div class="card bg-primary text-white-50">
                             <div class="card-body">
-                                <h5 class="mb-4 text-white"><i class="fas fa-building fa-2x"></i></i> 15 Empresas totais</h5>
+                                <h5 class="mb-4 text-white"><i class="fas fa-building fa-2x"></i></i> {{$countCompanies}} Empresas totais</h5>
                                 <p class="card-text">Empresas que estão com status de ativo dentro da plataforma.</p>
                             </div>
                         </div>

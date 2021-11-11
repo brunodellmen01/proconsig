@@ -3,7 +3,7 @@
 
 <head>
 
-    @include('layouts.admin.includes.head')
+    @include('layouts.system.includes.head')
 
 </head>
 
@@ -14,16 +14,16 @@
 
         <header id="page-topbar">
             @if (Auth::user()->role_id == 1)
-                @include('layouts.admin.includes.header-admin')
+                @include('layouts.system.includes.header-admin')
             @else
-                @include('layouts.admin.includes.header')
+                @include('layouts.system.includes.header')
             @endif
         </header>
 
         @if (Auth::user()->role_id == 1)
-            @include('layouts.admin.includes.siderbar-admin')
+            @include('layouts.system.includes.siderbar-admin')
         @else
-            @include('layouts.admin.includes.siderbar')
+            @include('layouts.system.includes.siderbar')
         @endif
 
         <!-- ============================================================== -->
@@ -31,7 +31,7 @@
         <!-- ============================================================== -->
         @yield('content')
         <!-- end main content-->
-        @include('layouts.admin.includes.footer')
+        @include('layouts.system.includes.footer')
 
     </div>
     <!-- END layout-wrapper -->
@@ -101,7 +101,7 @@
     <div class="rightbar-overlay"></div>
 
     <!-- JAVASCRIPT -->
-    @include('layouts.admin.includes.script-js')
+    @include('layouts.system.includes.script-js')
 </body>
 
 </html>
