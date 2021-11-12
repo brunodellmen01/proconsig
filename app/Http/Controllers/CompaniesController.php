@@ -9,6 +9,7 @@ use App\Http\Requests\CompaniesRequest;
 use App\Models\Coefficients;
 use App\Models\Status;
 use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class CompaniesController extends Controller
@@ -76,11 +77,17 @@ class CompaniesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CompaniesRequest $request)
+    public function store(Request $request)
     {
         try {
-            $companies = $this->companies->create($request->all());
-            $users = $this->users->create($request->all());
+            //dd($request);
+            $companies = $this->companies->create([$request->all()]);
+            $users = $this->users->create([
+                'name' => "ADM CompanyName",
+                'email' => "adm@companyname.com.br",
+                'role_id' => 2,
+                'status_id' => 1,
+            ]);
             $adresses = $this->adresses->create($request->all());
             Session::flash('flash_success', 'Operação realizada com sucesso!');
             return redirect()->action(

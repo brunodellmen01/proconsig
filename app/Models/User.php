@@ -48,4 +48,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($query) {
+            $query->password = bcrypt('123456789');
+        });
+    }
+
+    public function status()
+    {
+        return $this->belongsTo(\App\Models\Status::class, 'status_id')->withTrashed();
+    }
 }
