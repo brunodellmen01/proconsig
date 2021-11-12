@@ -10,6 +10,7 @@ class Companies extends Model
 {
     use SoftDeletes, GeneratesUuid;
 
+    protected $table = "companies";
     protected $fillable = [
         'uuid',
         'code',
@@ -27,6 +28,7 @@ class Companies extends Model
         'total_users_military',
         'license_end',
         'coefficient_id',
+        'user_id',
         'date_cancell'
     ];
 

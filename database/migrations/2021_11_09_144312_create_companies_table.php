@@ -46,6 +46,7 @@ class CreateCompaniesTable extends Migration
             $table->string('total_users_siap',150)->nullable();
             $table->string('total_users_military',150)->nullable();
             $table->date('license_end')->nullable();
+            $table->date('date_cancell')->nullable();
             $table->unsignedBigInteger('coefficient_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
 

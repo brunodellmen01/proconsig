@@ -19,11 +19,11 @@ class CompaniesController extends Controller
     protected $adresses;
 
 
-    public function __construct(CompaniesRepository $companies, UsersRepository $users)
+    public function __construct(CompaniesRepository $companies, UsersRepository $users, AdressesRepository $adresses)
     {
         $this->companies = $companies;
-        $this->users= $users;
-
+        $this->users = $users;
+        $this->adresses = $adresses;
     }
 
     public function index()
@@ -79,21 +79,51 @@ class CompaniesController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            //dd($request);
-            $this->companies->create([$request->all()]);
-            $this->users->create([$request->all()]);
-           $this->adresses->create($request->all());
-            Session::flash('flash_success', 'Operação realizada com sucesso!');
-            return redirect()->action(
-                [CompaniesController::class, 'index']
-            );
-        } catch (Exception $e) {
-            Session::flash('error', 'Ocorreu um erro, contate-o o suporte técnico!');
-            return redirect()->action(
-                [CompaniesController::class, 'index']
-            )->withErrors(['error' => $e->getMessage()]);
-        }
+        //try {
+        //dd($request);
+        $user = $this->users->create([
+            'name' => "ADM ". $request->fantasy_name,
+            'email' => $request->email,
+            'role_id' => 2,
+            'status_id' => 4,
+        ]);
+        $adresses = $this->adresses->create([
+            'name' => $request->name,
+            'number' => $request->number,
+            'district' => $request->district,
+            'zipcode' => $request->zipcode,
+            'complement' => $request->complement,
+            'city' => $request->city,
+            'state' => $request->state
+        ]);
+
+        $companies = $this->companies->create([
+            'fantasy_name' => $request->fantasy_name,
+            'company_name' => $request->company_name,
+            'document' => $request->document,
+            'responsible_name' => $request->responsible_name,
+            'email' => $request->email,
+            'status_id' => $request->status_id,
+            'phone' => $request->phone,
+            'total_users' => $request->total_users,
+            'total_users_fgts' => $request->total_users_fgts,
+            'total_users_siap' => $request->total_users_siap,
+            'total_users_military' => $request->total_users_military,
+            'license_end' => $request->license_end,
+            'user_id' => $user->id,
+            'date_cancell' => $request->date_cancell
+        ]);
+
+        Session::flash('flash_success', 'Operação realizada com sucesso!');
+        return redirect()->action(
+            [CompaniesController::class, 'index']
+        );
+        // } catch (Exception $e) {
+        //     Session::flash('error', 'Ocorreu um erro, contate-o o suporte técnico!');
+        //     return redirect()->action(
+        //         [CompaniesController::class, 'index']
+        //     )->withErrors(['error' => $e->getMessage()]);
+        // }
     }
 
     /**
