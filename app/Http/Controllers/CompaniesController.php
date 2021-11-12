@@ -81,9 +81,9 @@ class CompaniesController extends Controller
     {
         try {
             //dd($request);
-            $companies = $this->companies->create([$request->all()]);
-            $users = $this->users->create([$request->all()]);
-            $adresses = $this->adresses->create($request->all());
+            $this->companies->create([$request->all()]);
+            $this->users->create([$request->all()]);
+           $this->adresses->create($request->all());
             Session::flash('flash_success', 'Operação realizada com sucesso!');
             return redirect()->action(
                 [CompaniesController::class, 'index']
