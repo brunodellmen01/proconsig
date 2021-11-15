@@ -18,10 +18,10 @@ class CompaniesController extends Controller
     protected $adresses;
 
 
-    public function __construct(CompaniesRepository $companies, CompanyService $createCompanyService)
+    public function __construct(CompaniesRepository $companies, CompanyService $companyService)
     {
         $this->companies = $companies;
-        $this->createCompanyService = $createCompanyService;
+        $this->companyService = $companyService;
     }
 
     public function index()
@@ -78,7 +78,7 @@ class CompaniesController extends Controller
     public function store(Request $request)
     {
         try {
-            $this->createCompanyService->createCompany($request->all());
+            $this->companyService->createCompany($request->all());
 
         Session::flash('flash_success', 'Operação realizada com sucesso!');
         return redirect()->action(
