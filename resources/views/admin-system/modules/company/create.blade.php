@@ -69,7 +69,7 @@
                                                     </small>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     {{ Form::label('label', 'Status') }}:<br>
                                                     {{ Form::select('status_id', $status_id, null, ['required', 'class' => 'form-control select ' . ($errors->has('status_id') ? ' is-invalid' : null), 'placeholder' => 'Selecione']) }}
@@ -78,7 +78,7 @@
                                                     </small>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     {{ Form::label('label', 'Telefone') }}:
                                                     {{ Form::text('phone', null, ['id' => 'telefone', 'class' => 'form-control ' . ($errors->has('phone') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite um telefone para contato', 'maxlength' => '15']) }}
@@ -87,7 +87,7 @@
                                                     </small>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-3">
                                                 <div class="form-group">
                                                     {{ Form::label('label', 'Total de usuários') }}:*
                                                     {{ Form::text('total_users', null, ['required', 'id' => 'total_users', 'class' => 'form-control ' . ($errors->has('total_users') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários', 'maxlength' => '15']) }}
@@ -96,8 +96,6 @@
                                                     </small>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-md-3">
                                                 <div class="form-group">
                                                     {{ Form::label('label', 'Total de Usuários FGTS') }}:
@@ -146,14 +144,33 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="row">
-                                            <div class="col-md-8">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    {{ Form::label('label', 'CEP') }}:
+                                                    {{ Form::text('zipcode', null, ['class' => 'form-control ' . ($errors->has('zipcode') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o CEP', 'maxlength' => '100']) }}
+                                                    <small class="invalid-feedback">
+                                                        {!! $errors->first('zipcode') !!}
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     {{ Form::label('label', 'Logradouro') }}:
                                                     {{ Form::text('name', null, ['class' => 'form-control ' . ($errors->has('name') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Ex. Rua XV, Av. Duque...', 'maxlength' => '100']) }}
                                                     <small class="invalid-feedback">
                                                         {!! $errors->first('name') !!}
+                                                    </small>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    {{ Form::label('label', 'Complemento') }}:
+                                                    {{ Form::text('complement', null, ['class' => 'form-control ' . ($errors->has('complement') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o complemento', 'maxlength' => '100']) }}
+                                                    <small class="invalid-feedback">
+                                                        {!! $errors->first('complement') !!}
                                                     </small>
                                                 </div>
                                             </div>
@@ -166,7 +183,7 @@
                                                     </small>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     {{ Form::label('label', 'Bairro') }}:
                                                     {{ Form::text('district', null, ['class' => 'form-control ' . ($errors->has('district') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Nome do bairro', 'maxlength' => '100']) }}
@@ -175,25 +192,7 @@
                                                     </small>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    {{ Form::label('label', 'CEP') }}:
-                                                    {{ Form::text('zipcode', null, ['class' => 'form-control ' . ($errors->has('zipcode') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o CEP', 'maxlength' => '100']) }}
-                                                    <small class="invalid-feedback">
-                                                        {!! $errors->first('zipcode') !!}
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    {{ Form::label('label', 'Complemento') }}:
-                                                    {{ Form::text('complement', null, ['class' => 'form-control ' . ($errors->has('complement') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o complemento', 'maxlength' => '100']) }}
-                                                    <small class="invalid-feedback">
-                                                        {!! $errors->first('complement') !!}
-                                                    </small>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     {{ Form::label('label', 'Cidade') }}:
                                                     {{ Form::text('city', null, ['class' => 'form-control ' . ($errors->has('city') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite a cidade', 'maxlength' => '100']) }}
@@ -202,7 +201,7 @@
                                                     </small>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     {{ Form::label('label', 'Estados') }}:
                                                     {{ Form::text('state', null, ['class' => 'form-control ' . ($errors->has('state') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o estados', 'maxlength' => '100']) }}
@@ -212,7 +211,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <hr>
                                         <div class="col-md-12">
                                             <div class="form-group float-right">
                                                 @include('layouts.system.components.buttons.save')
