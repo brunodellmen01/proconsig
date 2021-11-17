@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,6 +26,25 @@ class DashController extends Controller
      */
     public function index()
     {
-       return view('company.modules.panels.home');
+        $data = [];
+        // $currentUser = Auth::user();
+        // $fistRoleName = $currentUser->getRoleNames()->first();
+        // switch ($fistRoleName) {
+        //     case 'master':
+        //         $data['user'] = User::all();
+        //         break;
+        //     case 'operator':
+        //         $user = User::where('id', Auth::user()->id);
+        //         # code...
+        //         break;
+        //     case 'admin':
+        //         # code...
+        //         break;
+        //     default:
+        //         # code...
+        //         break;
+        // };
+
+        return view('company.modules.panels.home', $data);
     }
 }

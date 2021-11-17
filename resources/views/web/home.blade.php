@@ -11,7 +11,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="{{ asset('backend/proconsig/images/favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('backend/images/favicon.png') }}">
     <link href="{{ asset('frontend/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->

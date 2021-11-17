@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-
-    @include('layouts.system.includes.head')
-
+    @include('admin.system.includes.head')
 </head>
 
 <div class="ajax_load" style="z-index: 999; display: none">
@@ -33,8 +31,10 @@
                                         <div class="col-lg-7">
                                             <div class="text-center">
 
-                                                <h4 class="mb-3"><i class="fas fa-plane-departure text-success"></i><span
-                                                        class="text-primary"> + de 500</span> clientes satisfeitos</h4>
+                                                <h4 class="mb-3"><i
+                                                        class="fas fa-plane-departure text-success"></i><span
+                                                        class="text-primary"> + de 500</span> clientes satisfeitos
+                                                </h4>
 
                                                 <div dir="ltr">
                                                     <div class="owl-carousel owl-theme auth-review-carousel"
@@ -68,10 +68,10 @@
                             <div class="d-flex flex-column h-100">
                                 <div class="mb-4 mb-md-5">
                                     <a href="index.html" class="d-block auth-logo">
-                                        <img src="https://proconsig.app/backend/proconsig/images/logo.png" alt="" height="80"
-                                            class="auth-logo-dark">
-                                        <img src="https://proconsig.app/backend/proconsig/images/logo.png" alt="" height="80"
-                                            class="auth-logo-light">
+                                        <img src="https://proconsig.app/backend/proconsig/images/logo.png" alt=""
+                                            height="80" class="auth-logo-dark">
+                                        <img src="https://proconsig.app/backend/proconsig/images/logo.png" alt=""
+                                            height="80" class="auth-logo-light">
                                     </a>
                                 </div>
                                 <div class="my-auto">
@@ -82,8 +82,8 @@
                                     </div>
 
                                     <div class="mt-4">
-                                        <form name="login" action="{{route('admin.login.do')}}" method="post">
-                                             <div class="mb-3">
+                                        <form name="login" action="{{ route('admin.login.do') }}" method="post">
+                                            <div class="mb-3">
                                                 <label for="username" class="form-label">E-mail</label>
                                                 <input type="text" class="form-control" id="username" name="email"
                                                     placeholder="Digite seu e-mail de acesso">
@@ -124,7 +124,8 @@
                                 <div class="mt-4 mt-md-5 text-center">
                                     <script>
                                         document.write(new Date().getFullYear())
-                                    </script> Proconsig. Feito a base de modão e chimarrão <i class="mdi mdi-heart text-danger"></i>
+                                    </script> Proconsig. Feito a base de modão e chimarrão <i
+                                        class="mdi mdi-heart text-danger"></i>
                                 </div>
                             </div>
 
@@ -140,8 +141,8 @@
     </div>
 
     <!-- JAVASCRIPT -->
-    @include('layouts.system.includes.script-js')
-    <script src="{{asset('assets/js/login.js')}}"></script>
+    @include('admin.system.includes.script-js')
+    <script src="{{ asset('backend/js/login.js') }}"></script>
 </body>
 
 </html>

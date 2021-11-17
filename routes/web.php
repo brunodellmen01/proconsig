@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\AdminSystemController;
 use App\Http\Controllers\Admin\CompaniesController;
 use App\Http\Controllers\Admin\DashController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,7 +35,7 @@ Route::group(['namespace' => 'Web', 'as' => 'web.'], function () {
 
 
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.', 'middleware' => 'role:master'], function () {
     /**
      * Formulário de Login
      */
@@ -44,7 +45,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
     /**
      * END Formulário de Login
      */
-    Route::get('/dash', [DashController::class, 'index'])->name('admin.dash');
+    Route::get('/dash', [DashController::class, 'index'])->name('admin.dash')->can('criar usuarios');
     Route::get('/crm', [AdminSystemController::class, 'index'])->name('index');
 
     Route::get('/companies', [AdminSystemController::class, 'index'])->name('index');

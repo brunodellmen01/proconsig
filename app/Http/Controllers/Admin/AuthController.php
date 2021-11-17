@@ -51,13 +51,9 @@ class AuthController extends Controller
             //     return response()->json($json);
             // }
 
-            if ($user->role_id == 1) {
-                $json['message'] = $this->message->success('Login efetuado com Sucesso')->render();
-                $json['redirect'] = route('admin.dash');
-            } else {
-                $json['message'] = $this->message->success('Login efetuado com Sucesso')->render();
-                $json['redirect'] = route('admin.home');
-            }
+
+            $json['message'] = $this->message->success('Login efetuado com Sucesso')->render();
+            $json['redirect'] = route('admin.dash');
             return response()->json($json);
         }
     }
