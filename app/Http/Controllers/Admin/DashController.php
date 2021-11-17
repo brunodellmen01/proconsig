@@ -45,6 +45,6 @@ class DashController extends Controller
         //         break;
         // };
 
-        return view('company.modules.panels.home', $data);
+        return view('admin.dashboard', $data);
     }
 }

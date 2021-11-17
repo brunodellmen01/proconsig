@@ -45,7 +45,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.', 'mi
     /**
      * END Formulário de Login
      */
-    Route::get('/dash', [DashController::class, 'index'])->name('admin.dash')->can('criar usuarios');
+    Route::get('/dash', [DashController::class, 'index'])->name('dash');
     Route::get('/crm', [AdminSystemController::class, 'index'])->name('index');
 
     Route::get('/companies', [AdminSystemController::class, 'index'])->name('index');

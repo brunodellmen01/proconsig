@@ -317,9 +317,9 @@
                 <!-- item-->
 
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-danger" {{ route('logout') }}" onclick="event.preventDefault();
+                <a class="dropdown-item text-danger" {{ route('admin.logout') }}" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">Sair</a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                     <input type="text" value="{{ session()->get('language') }}" name="session_name"
                         class="form-control" id="language">
                     @csrf
