@@ -12,7 +12,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link arrow-none" href="{{route('companies.index')}}" id="topnav-dashboard" role="button">
+                        <a class="nav-link arrow-none" href="{{route('admin.companies.index')}}" id="topnav-dashboard" role="button">
                             <i class="fas fa-building"></i></i><span key="t-dashboards"> Empresas</span>
                         </a>
                     </li>

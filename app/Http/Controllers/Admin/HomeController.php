@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::user()->role_id == 1) {
-            return redirect('crm/');
+            return redirect('admin/crm/');
         }
 
         return view('company.modules.panels.home');

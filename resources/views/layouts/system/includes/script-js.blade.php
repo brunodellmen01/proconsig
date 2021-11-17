@@ -10,6 +10,7 @@
 <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
 
 <script src="{{ asset('assets/js/app.js') }}"></script>
+<script src="{{ asset('assets/js/viacep.js') }}"></script>
 
 <!-- Required datatable js -->
 <script src="{{ asset('assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>

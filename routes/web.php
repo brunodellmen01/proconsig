@@ -1,6 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\AdminSystemController;
+use App\Http\Controllers\Admin\CompaniesController;
+use App\Http\Controllers\Admin\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,10 +21,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/crm', [App\Http\Controllers\AdminSystemController::class, 'index'])->name('home');
-    Route::resource('/companies', App\Http\Controllers\CompaniesController::class);
+
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
+ /**
+     * Formulário de Login
+     */
+    Route::get('/', [AuthController::class, 'ShowLoginForm'])->name('login');
+    Route::post('login', [AuthController::class, 'login'])->name('login.do');
+    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+    /**
+     * END Formulário de Login
+     */
+     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/crm', [AdminSystemController::class, 'index'])->name('index');
+
+    Route::resource('/companies', CompaniesController::class);
+    Route::get('/companies', [AdminSystemController::class, 'index'])->name('index');
+    Route::post('/companies/store', [AdminSystemController::class, 'store'])->name('store');
+
 });

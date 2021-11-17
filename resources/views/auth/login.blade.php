@@ -7,7 +7,16 @@
 
 </head>
 
+<div class="ajax_load" style="z-index: 999; display: none">
+    <div class="ajax_load_box">
+        <div class="ajax_load_box_circle"></div>
+        <p class="ajax_load_box_title">Aguarde, carregando...</p>
+    </div>
+</div>
+
 <body class="auth-body-bg">
+
+    <div class="ajax_response"></div>
 
     <div>
         <div class="container-fluid p-0">
@@ -68,22 +77,17 @@
                                 <div class="my-auto">
 
                                     <div>
-                                        <h5 class="text-primary">Bem vindo !</h5>
+                                        <h5 class="text-primary" id="geovane">Bem vindo !</h5>
                                         <p class="text-muted">Conecte-se na sua plataforma.</p>
                                     </div>
 
                                     <div class="mt-4">
-                                        <form method="POST" action="{{ route('login') }}">
-                                            @csrf
-                                            <div class="mb-3">
+                                        <form name="login" action="{{route('admin.login.do')}}" method="post">
+                                             <div class="mb-3">
                                                 <label for="username" class="form-label">E-mail</label>
                                                 <input type="text" class="form-control" id="username" name="email"
                                                     placeholder="Digite seu e-mail de acesso">
-                                                @error('email')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
+
                                             </div>
 
                                             <div class="mb-3">
@@ -92,11 +96,6 @@
                                                     <input type="password" name="password" class="form-control"
                                                         placeholder="Digite sua senha de acesso" aria-label="Password"
                                                         aria-describedby="password-addon">
-                                                    @error('password')
-                                                        <span class="invalid-feedback" role="alert">
-                                                            <strong>{{ $message }}</strong>
-                                                        </span>
-                                                    @enderror
                                                     <button class="btn btn-light " type="button" id="password-addon"><i
                                                             class="mdi mdi-eye-outline"></i></button>
                                                 </div>
@@ -142,7 +141,7 @@
 
     <!-- JAVASCRIPT -->
     @include('layouts.system.includes.script-js')
-
+    <script src="{{asset('assets/js/login.js')}}"></script>
 </body>
 
 </html>
