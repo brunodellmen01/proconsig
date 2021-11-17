@@ -1,9 +1,19 @@
 <?php
 
+/**
+ * Rota Web
+ */
+
+use App\Http\Controllers\Web\WebController;
+
+/**
+ * Rota Admin
+ */
+
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\AdminSystemController;
 use App\Http\Controllers\Admin\CompaniesController;
-use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\DashController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,15 +27,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace' => 'Web', 'as' => 'web.'], function () {
+    Route::get('/', [WebController::class, 'home'])->name('home');
 });
 
 
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
- /**
+    /**
      * Formulário de Login
      */
     Route::get('/', [AuthController::class, 'ShowLoginForm'])->name('login');
@@ -34,11 +44,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
     /**
      * END Formulário de Login
      */
-     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/dash', [DashController::class, 'index'])->name('admin.dash');
     Route::get('/crm', [AdminSystemController::class, 'index'])->name('index');
 
-    Route::resource('/companies', CompaniesController::class);
     Route::get('/companies', [AdminSystemController::class, 'index'])->name('index');
     Route::post('/companies/store', [AdminSystemController::class, 'store'])->name('store');
-
 });

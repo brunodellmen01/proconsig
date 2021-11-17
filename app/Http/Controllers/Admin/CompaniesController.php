@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Repositories\CompaniesRepository;
 use App\Http\Requests\CompaniesRequest;
 use App\Models\Coefficients;

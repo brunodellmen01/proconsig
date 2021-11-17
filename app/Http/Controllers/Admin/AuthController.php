@@ -39,7 +39,6 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $user = User::where('email', $request->email)->first();
 
-
             // if ($user->user_status == 0) {
             //     $json['message'] = $this->message->error('Opps parece que seu usuário está bloqueado para acessar esse painel')->render();
             //     Auth::logout();
@@ -52,12 +51,15 @@ class AuthController extends Controller
             //     return response()->json($json);
             // }
 
-
-            $json['message'] = $this->message->success('Login efetuado com Sucesso')->render();
-            $json['redirect'] = route('admin.home');
+            if ($user->role_id == 1) {
+                $json['message'] = $this->message->success('Login efetuado com Sucesso')->render();
+                $json['redirect'] = route('admin.dash');
+            } else {
+                $json['message'] = $this->message->success('Login efetuado com Sucesso')->render();
+                $json['redirect'] = route('admin.home');
+            }
             return response()->json($json);
         }
-
     }
 
     public function logout()
@@ -65,6 +67,4 @@ class AuthController extends Controller
         Auth::logout();
         return redirect()->route('admin.login');
     }
-
-
 }

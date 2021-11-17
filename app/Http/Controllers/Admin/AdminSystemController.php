@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 
 use App\Models\Companies;
 use Carbon\Carbon;
@@ -20,7 +21,7 @@ class AdminSystemController extends Controller
         $weekEndDate = Carbon::now()->endOfWeek();
         $month = date('m');
 
-        $companiesDayCurrent = Companies::whereBetween('created_at', [$today.' 00:00:00', $today.' 23:00:00'])->count();
+        $companiesDayCurrent = Companies::whereBetween('created_at', [$today . ' 00:00:00', $today . ' 23:00:00'])->count();
         $totalCompaniesActive = Companies::where('status_id', 4)->count();
         $companiesMonthCurrent = Companies::whereRaw("MONTH(created_at)={$month}")->count();
         $companiesWeekCurrent = Companies::whereBetween('created_at', [$weekStartDate, $weekEndDate])->count();

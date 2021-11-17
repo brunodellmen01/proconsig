@@ -1,11 +1,11 @@
 <meta charset="utf-8" />
-<title>Proconsig | Software de Gestão para Consignados</title>
+<title>Proconsig | Software de Gestão Para Vendas</title>
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="Proconsig | Software de Gestão para Consignados" name="description" />
 <meta content="RV6 Tecnologia" name="author" />
 <!-- App favicon -->
-<link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ asset('backend/images/favicon.png') }}">
 
 <!-- Bootstrap Css -->
 <link href="{{ asset('assets/css/bootstrap.min.css') }}"  rel="stylesheet"
