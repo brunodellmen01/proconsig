@@ -86,6 +86,7 @@
     <div class="rightbar-overlay"></div>
 
     @include('admin.system.includes.script-js')
+    <script src="{{ asset('backend/js/scripts.js') }}"></script>
 </body>
 
 </html>
