@@ -56,6 +56,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
      */
     Route::group(['middleware' => ['auth', 'auth.unique.user']], function () {
         Route::get('/dash', [DashController::class, 'index'])->name('dash');
+
+        Route::get('profile/{id}', [AuthController::class, 'edit'])->name('edit');
+        Route::post('profile/update', [AuthController::class, 'update'])->name('profile.update');
         /**
          * Rotas de empresas
          */

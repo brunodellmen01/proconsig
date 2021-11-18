@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Support\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -11,6 +12,14 @@ use Illuminate\Support\Facades\Storage;
 
 class AuthController extends Controller
 {
+    protected $user;
+    protected $message;
+
+
+    public function __construct()
+    {
+        $this->message = new Message();
+    }
 
 
     public function showLoginForm()
@@ -63,5 +72,36 @@ class AuthController extends Controller
         echo 'bateu aqui';
         Auth::logout();
         return redirect()->route('admin.login');
+    }
+
+    public function edit(Request $request)
+    {
+        if (Auth::user()->id  != $request->id) {
+            //dieMessage('Desculpe você não tem permissão ou não está logado para alterar esse perfil', route('admin.dash'));
+        } else {
+            $user = User::where('id', $request->id)->first();
+            return view('admin.profile.edit', [
+                'user' => $user
+            ]);
+        }
+    }
+
+    public function update(Request $request)
+    {
+
+        $user = User::find($request->id);
+
+        if (!empty($request->password)) {
+            $user->password = bcrypt($request->password);
+        }
+
+        if (!$user->save()) {
+            $json['message'] = $this->message->info('Opss ocorreu um erro ao atualizar, por favor verifique todos os campos')->render();
+            return response()->json($json);
+        }
+
+        $json['message'] = $this->message->success('Perfil atualizado com sucesso')->render();
+        $json['redirect'] = route('admin.dash');
+        return response()->json($json);
     }
 }
