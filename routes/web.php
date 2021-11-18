@@ -32,16 +32,24 @@ Route::group(['namespace' => 'Web', 'as' => 'web.'], function () {
     Route::get('/', [WebController::class, 'home'])->name('home');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register Admin Routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
 
-
-
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.', 'middleware' => 'role:master'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], function () {
     /**
      * Formulário de Login
      */
     Route::get('/', [AuthController::class, 'ShowLoginForm'])->name('login');
-    Route::post('login', [AuthController::class, 'login'])->name('login.do');
-    Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.do');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     /**
      * END Formulário de Login
      */

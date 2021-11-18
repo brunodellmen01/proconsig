@@ -26,7 +26,7 @@ class DashController extends Controller
      */
     public function index()
     {
-        $data = [];
+        // $data = [];
         // $currentUser = Auth::user();
         // $fistRoleName = $currentUser->getRoleNames()->first();
         // switch ($fistRoleName) {
@@ -45,6 +45,6 @@ class DashController extends Controller
         //         break;
         // };
 
-        return view('admin.dashboard', $data);
+        return view('admin.dashboard');
     }
 }

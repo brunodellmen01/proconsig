@@ -137,7 +137,7 @@ File: Main Css File
   content: "\ea3f"; }
 
 body[data-topbar="dark"] #page-topbar {
-  background-color: #2a3042; }
+  background-color: #02735E; }
 
 body[data-topbar="dark"] .navbar-header .dropdown .show.header-item {
   background-color: rgba(255, 255, 255, 0.05); }
@@ -874,10 +874,10 @@ body[data-layout="horizontal"][data-layout-size="boxed"] .container-fluid, body[
 
 /*!
  * Waves v0.7.6
- * http://fian.my.id/Waves 
- * 
- * Copyright 2014-2018 Alfiana E. Sibuea and other contributors 
- * Released under the MIT license 
+ * http://fian.my.id/Waves
+ *
+ * Copyright 2014-2018 Alfiana E. Sibuea and other contributors
+ * Released under the MIT license
  * https://github.com/fians/Waves/blob/master/LICENSE */
 .waves-effect {
   position: relative;
@@ -2609,7 +2609,7 @@ input[switch="dark"]:checked + label {
     .wizard.vertical-wizard .content > .body {
       padding: 0; }
 
-/* 
+/*
 Datatable
 */
 div.dataTables_wrapper div.dataTables_filter {

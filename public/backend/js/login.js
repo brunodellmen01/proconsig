@@ -13,22 +13,23 @@ $(function () {
         const email = form.find('input[name="email"]').val();
         const password = form.find('input[name="password"]').val();
 
-        // $('.ajax_load').fadeIn().css('display', 'flex');
+        $('.ajax_load').fadeIn().css('display', 'flex');
 
         $.post(action, {
             email: email,
             password: password
         }, function (response) {
-            // $('.ajax_load').fadeOut(function () {
+            $('.ajax_load').fadeOut(function () {
 
-            if (response.message) {
-                ajaxMessage(response.message, 3);
-            }
+                if (response.message) {
+                    ajaxMessage(response.message, 3);
+                }
 
-            if (response.redirect) {
-                window.location.href = response.redirect;
-            }
-            // });
+                if (response.redirect) {
+                    window.location.href = response.redirect;
+                }
+                
+            });
         }, 'json');
 
     });

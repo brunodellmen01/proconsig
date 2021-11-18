@@ -60,6 +60,7 @@ class AuthController extends Controller
 
     public function logout()
     {
+        echo 'bateu aqui';
         Auth::logout();
         return redirect()->route('admin.login');
     }
