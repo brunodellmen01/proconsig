@@ -30,7 +30,7 @@ class CompaniesController extends Controller
         $companies = $this->companies->findAll();
         $countCompanies = $this->companies->count();
 
-        return view('admin-system.modules.company.index', compact('companies', 'countCompanies'));
+        return view('admin.company.index', compact('companies', 'countCompanies'));
     }
 
     public function create()
@@ -67,7 +67,7 @@ class CompaniesController extends Controller
 
         $status_id = Status::pluck('name', 'id');
         $coefficient_id = Coefficients::pluck('name', 'id');
-        return view('admin-system.modules.company.create', compact('status_id', 'coefficient_id', 'states'));
+        return view('admin.company.create', compact('status_id', 'coefficient_id', 'states'));
     }
 
     /**

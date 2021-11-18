@@ -14,21 +14,21 @@ class AdminSystemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $today = Carbon::today()->format('Y-m-d');
-        $weekStartDate = Carbon::now()->startOfWeek();
-        $weekEndDate = Carbon::now()->endOfWeek();
-        $month = date('m');
+    // public function index()
+    // {
+    //     $today = Carbon::today()->format('Y-m-d');
+    //     $weekStartDate = Carbon::now()->startOfWeek();
+    //     $weekEndDate = Carbon::now()->endOfWeek();
+    //     $month = date('m');
 
-        $companiesDayCurrent = Companies::whereBetween('created_at', [$today . ' 00:00:00', $today . ' 23:00:00'])->count();
-        $totalCompaniesActive = Companies::where('status_id', 4)->count();
-        $companiesMonthCurrent = Companies::whereRaw("MONTH(created_at)={$month}")->count();
-        $companiesWeekCurrent = Companies::whereBetween('created_at', [$weekStartDate, $weekEndDate])->count();
+    //     $companiesDayCurrent = Companies::whereBetween('created_at', [$today . ' 00:00:00', $today . ' 23:00:00'])->count();
+    //     $totalCompaniesActive = Companies::where('status_id', 4)->count();
+    //     $companiesMonthCurrent = Companies::whereRaw("MONTH(created_at)={$month}")->count();
+    //     $companiesWeekCurrent = Companies::whereBetween('created_at', [$weekStartDate, $weekEndDate])->count();
 
-        $lastSales = Companies::orderByDesc('created_at')->limit(5)->get();
-        return view('admin-system.modules.panels.home', compact('companiesDayCurrent', 'totalCompaniesActive', 'companiesMonthCurrent', 'companiesWeekCurrent', 'lastSales'));
-    }
+    //     $lastSales = Companies::orderByDesc('created_at')->limit(5)->get();
+    //     return view('admin.dashboard', compact('companiesDayCurrent', 'totalCompaniesActive', 'companiesMonthCurrent', 'companiesWeekCurrent', 'lastSales'));
+    // }
 
     /**
      * Show the form for creating a new resource.

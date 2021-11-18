@@ -1,4 +1,4 @@
-@extends('layouts.system.app')
+@extends('admin.app.app')
 @section('content')
     <div class="main-content">
 
@@ -16,7 +16,7 @@
 
                     <div class="col-sm-4">
                         <div class="text-sm-end">
-                            <a href="{{ route('companies.create') }}" type="button" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Adicionar</a>
+                            <a href="{{ route('admin.companies.create') }}" type="button" class="btn btn-success btn-rounded waves-effect waves-light mb-2 me-2"><i class="mdi mdi-plus me-1"></i> Adicionar</a>
                         </div>
                     </div>
                 </div>

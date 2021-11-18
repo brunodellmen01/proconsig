@@ -1,4 +1,4 @@
-@extends('layouts.system.app')
+@extends('admin.app.app')
 @section('content')
     <div class="main-content">
 
@@ -21,7 +21,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        {{ Form::open(['url' => 'companies', 'class' => 'needs-validation', 'novalidate']) }}
+                                        {{ Form::open(['url' => 'store', 'class' => 'needs-validation', 'novalidate']) }}
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-6">
@@ -214,7 +214,7 @@
                                         <hr>
                                         <div class="col-md-12">
                                             <div class="form-group float-right">
-                                                @include('layouts.system.components.buttons.save')
+                                                @include('admin.system.components.buttons.save')
                                             </div>
                                         </div>
                                         {!! Form::close() !!}

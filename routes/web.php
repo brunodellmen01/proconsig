@@ -55,9 +55,15 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
      */
     Route::group(['middleware' => ['auth', 'auth.unique.user']], function () {
         Route::get('/dash', [DashController::class, 'index'])->name('dash');
-        Route::get('/crm', [AdminSystemController::class, 'index'])->name('index');
-
-        Route::get('/companies', [AdminSystemController::class, 'index'])->name('index');
-        Route::post('/companies/store', [AdminSystemController::class, 'store'])->name('store');
+        /**
+         * Rotas de empresas
+         */
+        Route::group(['prefix' => 'companies'], function () {
+            Route::get('/', [CompaniesController::class, 'index'])->name('companies.index');
+            Route::get('/create', [CompaniesController::class, 'create'])->name('companies.create');
+            Route::post('/store', [CompaniesController::class, 'store'])->name('companies.store');
+        });
+        /**
+         * END empresa    */
     });
 });
