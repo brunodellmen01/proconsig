@@ -20,8 +20,7 @@ class Users extends Seeder
                 'uuid' => Uuid::uuid4(),
                 'name' => 'Administrador',
                 'email' => 'adm@rv6tecnologia.com.br',
-                'role_id' => '1',
-                'password' => bcrypt('123456789'),
+                'password' => bcrypt('123456'),
                 'email_verified_at' => date('Y-m-d H:m:s'),
                 'created_at' => date('Y-m-d H:m:s'),
             ]

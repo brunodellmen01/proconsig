@@ -14,6 +14,7 @@ class CreateAdressesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('adresses');
         Schema::create('adresses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->longText('uuid');
@@ -36,6 +37,6 @@ class CreateAdressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status');
+        Schema::dropIfExists('adresses');
     }
 }

@@ -79,6 +79,19 @@
                                     <div>
                                         <h5 class="text-primary" id="geovane">Bem vindo !</h5>
                                         <p class="text-muted">Conecte-se na sua plataforma.</p>
+                                        @if (session()->has('message'))
+                                            <div class="col-12">
+                                                <div class="text-white-50 card bg-danger">
+                                                    <div class="card-body">
+                                                        <div class="h5 mt-0 mb-4 text-white card-title"><i
+                                                                class="mdi mdi-block-helper me-3"></i>BLOCK: </div>
+                                                        <p class="card-text">Desculpe mais a sessão desse usuário
+                                                            está ativa em outra
+                                                            máquina!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
                                     </div>
 
                                     <div class="mt-4">

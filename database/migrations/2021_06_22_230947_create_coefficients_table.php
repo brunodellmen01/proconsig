@@ -13,6 +13,7 @@ class CreateCoefficientsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('coefficients');
         Schema::create('coefficients', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->longText('uuid');
@@ -30,6 +31,6 @@ class CreateCoefficientsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status');
+        Schema::dropIfExists('coefficients');
     }
 }

@@ -53,9 +53,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
     /**
      * END Formulário de Login
      */
-    Route::get('/dash', [DashController::class, 'index'])->name('dash');
-    Route::get('/crm', [AdminSystemController::class, 'index'])->name('index');
+    Route::group(['middleware' => ['auth', 'auth.unique.user']], function () {
+        Route::get('/dash', [DashController::class, 'index'])->name('dash');
+        Route::get('/crm', [AdminSystemController::class, 'index'])->name('index');
 
-    Route::get('/companies', [AdminSystemController::class, 'index'])->name('index');
-    Route::post('/companies/store', [AdminSystemController::class, 'store'])->name('store');
+        Route::get('/companies', [AdminSystemController::class, 'index'])->name('index');
+        Route::post('/companies/store', [AdminSystemController::class, 'store'])->name('store');
+    });
 });
