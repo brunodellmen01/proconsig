@@ -70,15 +70,16 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title mb-4">Mês Anterior</h4>
+                                <span class="badge rounded-pill bg-success float-end" key="t-new">Pagos</span>
+                                <h4 class="card-title mb-4">10 Contratos</h4>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <h3>R$34.252</h3>
 
                                         <div class="mt-4">
                                             <a href="javascript: void(0);"
-                                                class="btn btn-primary waves-effect waves-light btn-sm">Últimas vendas <i
-                                                    class="mdi mdi-arrow-right ms-1"></i></a>
+                                            class="btn btn-primary waves-effect waves-light btn-sm">Últimas vendas <i
+                                            class="mdi mdi-arrow-right ms-1"></i></a>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
@@ -93,7 +94,7 @@
 
                     <div class="col-xl-8">
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -115,7 +116,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -137,7 +138,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="card mini-stats-wid">
                                     <div class="card-body">
                                         <div class="d-flex">
@@ -146,28 +147,6 @@
                                                 <h4 class="mb-0">R$15.000,00</h4>
                                                 <span class="badge rounded-pill bg-info float-end"
                                                     key="t-new">Digitado</span>
-                                            </div>
-
-                                            <div class="flex-shrink-0 align-self-center">
-                                                <div class="avatar-sm rounded-circle bg-primary mini-stat-icon">
-                                                    <span class="avatar-title rounded-circle bg-primary">
-                                                        <i class="fas fa-file-contract fa-2x"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card mini-stats-wid">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <div class="flex-grow-1">
-                                                <p class="text-muted fw-medium">10 Contratos</p>
-                                                <h4 class="mb-0">R$15.000,00</h4>
-                                                <span class="badge rounded-pill bg-success float-end"
-                                                    key="t-new">Pagos</span>
                                             </div>
 
                                             <div class="flex-shrink-0 align-self-center">

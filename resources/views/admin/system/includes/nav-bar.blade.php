@@ -16,7 +16,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link arrow-none" href="#" id="topnav-dashboard" role="button">
+                <a class="nav-link arrow-none" href="{{route('admin.contracts.index')}}" id="topnav-dashboard" role="button">
                     <i class="bx bxs-file-doc me-2"></i><span key="t-dashboards">Contratos</span>
                 </a>
             </li>

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\AdminSystemController;
 use App\Http\Controllers\Admin\CompaniesController;
 use App\Http\Controllers\Admin\DashController;
+use App\Http\Controllers\ContractsController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
@@ -65,5 +66,16 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
         });
         /**
          * END empresa    */
+
+         /**
+         * Rotas de contratos
+         */
+        Route::group(['prefix' => 'contracts'], function () {
+            Route::get('/', [ContractsController::class, 'index'])->name('contracts.index');
+            Route::get('/create', [ContractsController::class, 'create'])->name('contracts.create');
+            Route::post('/store', [ContractsController::class, 'store'])->name('contracts.store');
+        });
+        /**
+         * END contratos    */
     });
 });
