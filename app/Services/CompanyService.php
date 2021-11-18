@@ -20,8 +20,7 @@ class CompanyService
         $user = $this->users->create([
             'name' => "ADM ". $request['fantasy_name'],
             'email' => $request['email'],
-            'role_id' => 2,
-            'status_id' => 4,
+            'status_id' => 1,
         ]);
         $adresses = $this->adresses->create([
             'name' => $request['name'],

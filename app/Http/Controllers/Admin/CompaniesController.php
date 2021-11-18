@@ -8,6 +8,7 @@ use App\Http\Requests\CompaniesRequest;
 use App\Models\Coefficients;
 use App\Models\Status;
 use App\Services\CompanyService;
+use App\Support\Message;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -17,12 +18,14 @@ class CompaniesController extends Controller
     protected $companies;
     protected $users;
     protected $adresses;
+    protected $message;
 
 
     public function __construct(CompaniesRepository $companies, CompanyService $companyService)
     {
         $this->companies = $companies;
         $this->companyService = $companyService;
+        $this->message = new Message();
     }
 
     public function index()
@@ -80,16 +83,12 @@ class CompaniesController extends Controller
     {
         try {
             $this->companyService->createCompany($request->all());
-
-        Session::flash('flash_success', 'Operação realizada com sucesso!');
-        return redirect()->action(
-            [CompaniesController::class, 'index']
-        );
+            $json['message'] = $this->message->success('empresa cadastrada com sucesso')->render();
+            $json['redirect'] = route('admin.companies.index');
+            return response()->json($json);
         } catch (Exception $e) {
-            Session::flash('error', 'Ocorreu um erro, contate-o o suporte técnico!');
-            return redirect()->action(
-                [CompaniesController::class, 'index']
-            )->withErrors(['error' => $e->getMessage()]);
+            $json['message'] = $this->message->warning('Desculpe, não foi possível cadastrar uma empresa, tente novamente!')->render();
+            return response()->json($json);
         }
     }
 
