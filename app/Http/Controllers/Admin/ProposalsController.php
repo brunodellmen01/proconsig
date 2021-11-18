@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Http\Repositories\ProposalsRepository;
 use App\Http\Requests\ProposalRequest;
 use Illuminate\Http\Request;
@@ -30,7 +31,6 @@ class ProposalsController extends Controller
 
     public function create()
     {
-
     }
 
     /**
@@ -63,7 +63,6 @@ class ProposalsController extends Controller
      */
     public function show($id)
     {
-
     }
 
     /**
@@ -74,7 +73,6 @@ class ProposalsController extends Controller
      */
     public function edit($id)
     {
-
     }
 
     /**
