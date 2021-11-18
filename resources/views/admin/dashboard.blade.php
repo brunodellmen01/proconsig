@@ -12,12 +12,12 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                            <h4 class="mb-sm-0 font-size-18">Horizontal Layout</h4>
+                            <h4 class="mb-sm-0 font-size-18">Dashboard Proconsig</h4>
 
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Layouts</a></li>
-                                    <li class="breadcrumb-item active">Horizontal Layout</li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Pagina</a></li>
+                                    <li class="breadcrumb-item active">Dashboard Proconsig</li>
                                 </ol>
                             </div>
 
@@ -33,8 +33,8 @@
                                 <div class="row">
                                     <div class="col-7">
                                         <div class="text-primary p-3">
-                                            <h5 class="text-primary">Welcome Back !</h5>
-                                            <p>Skote Dashboard</p>
+                                            <h5 class="text-primary">Bem vindo ao Proconsig</h5>
+                                            <p>Dashboard</p>
                                         </div>
                                     </div>
                                     <div class="col-5 align-self-end">
@@ -50,7 +50,7 @@
                                             <img src="{{ asset('assets/images/users/avatar-1.jpg') }}" alt=""
                                                 class="img-thumbnail rounded-circle">
                                         </div>
-                                        <h5 class="font-size-15 text-truncate">Henry Price</h5>
+                                        <h5 class="font-size-15 text-truncate">{{ Auth::user()->name }}</h5>
                                         <p class="text-muted mb-0 text-truncate">UI/UX Designer</p>
                                     </div>
 
@@ -69,8 +69,8 @@
                                             </div>
                                             <div class="mt-4">
                                                 <a href="javascript: void(0);"
-                                                    class="btn btn-primary waves-effect waves-light btn-sm">View
-                                                    Profile <i class="mdi mdi-arrow-right ms-1"></i></a>
+                                                    class="btn btn-primary waves-effect waves-light btn-sm">Meu Perfil <i
+                                                        class="mdi mdi-arrow-right ms-1"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -408,7 +408,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title mb-4">Latest Transaction</h4>
+                                <h4 class="card-title mb-4">Últimas Propostas</h4>
                                 <div class="table-responsive">
                                     <table class="table align-middle table-nowrap mb-0">
                                         <thead class="table-light">
