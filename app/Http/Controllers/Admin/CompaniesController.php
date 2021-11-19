@@ -168,9 +168,7 @@ class CompaniesController extends Controller
             return response()->json($json);
         }
 
-        $json['message'] = $this->message->success('Perfil atualizado com sucesso')->render();
-        $json['redirect'] = route('admin.dash');
-        return response()->json($json);
+        return redirect()->route('admin.companies.index')->with('msg', 'Status alterado com sucesso!');
     }
 
     /**

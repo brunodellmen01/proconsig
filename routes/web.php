@@ -67,7 +67,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
             Route::get('/create', [CompaniesController::class, 'create'])->name('companies.create');
             Route::get('edit/{id}', [CompaniesController::class, 'edit'])->name('edit');
             Route::post('edit/update', [CompaniesController::class, 'update'])->name('edit.update');
-            Route::post('inactive/{id}', [CompaniesController::class, 'inactive'])->name('inactive.status');
+            Route::get('inactive/{id}', [CompaniesController::class, 'inactive'])->name('inactive.status');
             Route::post('/store', [CompaniesController::class, 'store'])->name('companies.store');
         });
         /**
