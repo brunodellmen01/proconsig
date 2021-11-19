@@ -118,10 +118,10 @@ class CompaniesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($uuid)
+    public function edit($id)
     {
         try {
-            $company = $this->companies->findById($uuid);
+            $company = $this->companies->findById($id);
             return view('admin.company.edit', compact('company'));
         } catch (\Throwable $th) {
             Session::flash('error', 'Ocorreu um erro, contate-o o suporte técnico!');

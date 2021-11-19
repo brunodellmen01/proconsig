@@ -27,7 +27,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title mb-4">Atualizar a empresa {{$company->company_name}} - {{ $company->uuid }}</h4>
+                                <h4 class="card-title mb-4">Atualizar a empresa {{$company->company_name}} - {{ $company->code }}</h4>
                                 <form action="{{ route('admin.edit.update', ['uuid' => $company->uuid]) }}"
                                     data-validation-required-message="Este campo é obrigatório" method="post"
                                     enctype="multipart/form-data">

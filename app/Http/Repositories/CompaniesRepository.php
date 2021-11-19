@@ -18,7 +18,7 @@ class CompaniesRepository implements RepositoryInterface
 
 	public function findById($id)
 	{
-		return $this->companies->whereUuid($id)->firstOrFail();
+		return $this->companies->where('id', $id)->firstOrFail();
 	}
 
     public function findLastById($id)

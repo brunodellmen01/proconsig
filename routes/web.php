@@ -65,7 +65,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
         Route::group(['prefix' => 'companies'], function () {
             Route::get('/', [CompaniesController::class, 'index'])->name('companies.index');
             Route::get('/create', [CompaniesController::class, 'create'])->name('companies.create');
-            Route::get('edit/{uuid}', [CompaniesController::class, 'edit'])->name('edit');
+            Route::get('edit/{id}', [CompaniesController::class, 'edit'])->name('edit');
             Route::post('edit/update', [CompaniesController::class, 'update'])->name('edit.update');
             Route::post('/store', [CompaniesController::class, 'store'])->name('companies.store');
         });
