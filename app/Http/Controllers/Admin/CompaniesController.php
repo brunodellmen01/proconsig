@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Repositories\CompaniesRepository;
 use App\Http\Requests\CompaniesRequest;
 use App\Models\Coefficients;
+use App\Models\Companies;
 use App\Models\Status;
 use App\Services\CompanyService;
 use App\Support\Message;
@@ -117,11 +118,11 @@ class CompaniesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($uuid)
     {
         try {
-            $companies = $this->companies->findById($id);
-            return view('modules.customer.edit', compact('companies'));
+            $company = $this->companies->findById($uuid);
+            return view('admin.company.edit', compact('company'));
         } catch (\Throwable $th) {
             Session::flash('error', 'Ocorreu um erro, contate-o o suporte técnico!');
             return redirect()->action(
@@ -137,21 +138,17 @@ class CompaniesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(CompaniesRequest $request, $uuid)
+    public function update(Request $request, $uuid)
     {
+        dd($uuid);
         try {
             $companies = $this->companies->update($uuid, $request->all());
-            $users = $this->users->update($uuid, $request->all());
-            $adresses = $this->adresses->update($uuid, $request->all());
-            Session::flash('flash_success', 'Operação realizada com sucesso!');
-            return redirect()->action(
-                [CompaniesController::class, 'index']
-            );
-        } catch (\Throwable $th) {
-            Session::flash('error', 'Ocorreu um erro, contate-o o suporte técnico!');
-            return redirect()->action(
-                [CompaniesController::class, 'index']
-            )->withErrors($th->getMessage());
+            $json['message'] = $this->message->success('Empresa atualizada com sucesso')->render();
+            $json['redirect'] = route('admin.company.edit', ['uuid' => $request->uuid]);
+            return response()->json($json);
+        } catch (Exception $e) {
+            $json['message'] = $this->message->warning('Desculpe, não foi possível atualizar a empresa, tente novamente!')->render();
+            return response()->json($json);
         }
     }
 
