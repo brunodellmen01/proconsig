@@ -152,6 +152,27 @@ class CompaniesController extends Controller
         }
     }
 
+    public function inactive(Request $request)
+    {
+
+        $company = Companies::find($request->id);
+
+        if ($company->status_id = 1) {
+            $company->status_id = 2;
+        } else {
+            $company->status_id = 1;
+        }
+
+        if (!$company->save()) {
+            $json['message'] = $this->message->info('Opss ocorreu um erro ao atualizar, por favor verifique todos os campos')->render();
+            return response()->json($json);
+        }
+
+        $json['message'] = $this->message->success('Perfil atualizado com sucesso')->render();
+        $json['redirect'] = route('admin.dash');
+        return response()->json($json);
+    }
+
     /**
      * Remove the specified resource from storage.
      *

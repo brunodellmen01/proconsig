@@ -68,7 +68,7 @@
                                                         <i class="far fa-edit mr-1"></i>
                                                     </a>
 
-                                                    <a href="{{ url('admin/companies/edit', $company->id) }}"
+                                                    <a href="{{ url('admin/companies/inactive', $company->id) }}"
                                                         class="table-action-btn btn btn-sm bg-success-light">
                                                         <i class="fas fa-power-off mr-1"></i>
                                                     </a>
