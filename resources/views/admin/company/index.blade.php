@@ -23,12 +23,38 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card bg-primary text-white-50">
+                    <div class="col-lg-3">
+                        <div class="card bg-success text-white-50">
                             <div class="card-body">
-                                <h5 class="mb-4 text-white"><i class="fas fa-building fa-2x"></i></i> {{ $countCompanies }}
-                                    Empresas totais</h5>
-                                <p class="card-text">Empresas que estão com status de ativo dentro da plataforma.</p>
+                                <h5 class="mb-4 text-white"><i class="fas fa-arrow-up"></i> Ativas</h5>
+                                <span class="badge rounded-pill bg-danger float-end" key="t-new">{{$countCompaniesActive}} empresa (s) </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card bg-danger text-white-50">
+                            <div class="card-body">
+                                <h5 class="mb-4 text-white"><i class="fas fa-level-down-alt"></i></i> Inativas</h5>
+                                <span class="badge rounded-pill bg-info float-end" key="t-new">{{$countCompaniesInactive}} empresa (s) </span>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card bg-warning text-white-50">
+                            <div class="card-body">
+                                <h5 class="mb-4 text-white"><i class="fab fa-tumblr"></i> Demonstração</h5>
+                                <span class="badge rounded-pill bg-success float-end" key="t-new">{{$countCompaniesTest}} empresa (s) </span>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card bg-info text-white-50">
+                            <div class="card-body">
+                                <h5 class="mb-4 text-white"<i class="fas fa-sync-alt"></i> Total</h5>
+                                <span class="badge rounded-pill bg-success float-end" key="t-new">{{$countCompanies}} empresa (s) </span>
+                                <br>
                             </div>
                         </div>
                     </div>

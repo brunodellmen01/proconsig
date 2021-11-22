@@ -31,9 +31,24 @@ class CompaniesRepository implements RepositoryInterface
         return $this->companies->get();
 	}
 
-	public function count()
+	public function countTotal()
 	{
 		return $this->companies->count();
+	}
+
+    public function countActive()
+	{
+		return $this->companies->where('status_id', 1)->count();
+	}
+
+    public function countInactive()
+	{
+		return $this->companies->where('status_id', 2)->count();
+	}
+
+    public function countTest()
+	{
+		return $this->companies->where('status_id', 3)->count();
 	}
 
 

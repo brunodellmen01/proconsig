@@ -33,9 +33,12 @@ class CompaniesController extends Controller
     public function index()
     {
         $companies = $this->companies->findAll();
-        $countCompanies = $this->companies->count();
+        $countCompanies = $this->companies->countTotal();
+        $countCompaniesActive = $this->companies->countActive();
+        $countCompaniesInactive = $this->companies->countInactive();
+        $countCompaniesTest = $this->companies->countTest();
 
-        return view('admin.company.index', compact('companies', 'countCompanies'));
+        return view('admin.company.index', compact('companies', 'countCompanies', 'countCompaniesActive', 'countCompaniesInactive', 'countCompaniesTest'));
     }
 
     public function create()
