@@ -140,7 +140,6 @@ class CompaniesController extends Controller
      */
     public function update(Request $request, $uuid)
     {
-        dd($uuid);
         try {
             $companies = $this->companies->update($uuid, $request->all());
             $json['message'] = $this->message->success('Empresa atualizada com sucesso')->render();
