@@ -82,7 +82,7 @@ class CompaniesController extends Controller
      */
     public function store(Request $request)
     {
-        try {
+       try {
             $this->companyService->createCompany($request->all());
             $json['message'] = $this->message->success('empresa cadastrada com sucesso')->render();
             $json['redirect'] = route('admin.companies.index');
@@ -158,10 +158,12 @@ class CompaniesController extends Controller
 
         if ($company->status_id = 1) {
             $company->status_id = 2;
-            $company->date_cancell = date('d/m/Y');
-        } else {
+            $company->date_cancell = date('Y/m/d');
+        }
+
+        if ($company->status_id = 2) {
             $company->status_id = 1;
-            $company->date_cancell = NULL;
+            $company->date_cancell = null;
         }
 
         if (!$company->save()) {
