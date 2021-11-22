@@ -63,7 +63,7 @@
                                                 <td>{{ $company->status->name }}</td>
                                                 <td>{{ formatDateToView($company->created_at) }}</td>
                                                 <td class="text-right">
-                                                    <a href="{{ url('admin/companies/edit', $company->id) }}"
+                                                    <a href="{{ url('admin/companies/edit', $company->uuid) }}"
                                                         class="table-action-btn btn btn-sm bg-success-light">
                                                         <i class="far fa-edit mr-1"></i>
                                                     </a>

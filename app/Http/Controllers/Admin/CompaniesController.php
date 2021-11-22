@@ -141,9 +141,9 @@ class CompaniesController extends Controller
     public function update(Request $request, $uuid)
     {
         try {
-            $companies = $this->companies->update($uuid, $request->all());
+            $this->companies->update($uuid, $request->all());
             $json['message'] = $this->message->success('Empresa atualizada com sucesso')->render();
-            $json['redirect'] = route('admin.company.edit', ['uuid' => $request->uuid]);
+            $json['redirect'] = route('admin.company.index');
             return response()->json($json);
         } catch (Exception $e) {
             $json['message'] = $this->message->warning('Desculpe, não foi possível atualizar a empresa, tente novamente!')->render();

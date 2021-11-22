@@ -18,7 +18,7 @@ class CompaniesRepository implements RepositoryInterface
 
 	public function findById($id)
 	{
-		return $this->companies->where('id', $id)->firstOrFail();
+		return $this->companies->whereUuid($id)->firstOrFail();
 	}
 
     public function findLastById($id)
@@ -46,10 +46,10 @@ class CompaniesRepository implements RepositoryInterface
 
 	public function update($uuid, $params)
 	{
-        $companies = $this->companies->whereUuid($uuid)->firstOrFail();
-        $companies->fill($params)->update();
+        $company = $this->companies->whereUuid($uuid)->firstOrFail();
+        $company->fill($params)->update();
 
-		return $companies;
+		return $company;
 	}
 
 	public function destroy($id)

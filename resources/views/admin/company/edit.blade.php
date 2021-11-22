@@ -104,8 +104,8 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                {{ Form::label('label', 'Total de Usuários FGTS') }}:
-                                                {{ Form::text('total_users_fgts', null, ['class' => 'form-control ' . ($errors->has('total_users_fgts') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o FGTS', 'maxlength' => '100', 'minlength' => '2']) }}
+                                                {{ Form::label('label', 'Total de Usuários (FGTS)') }}:
+                                                {{ Form::text('total_users_fgts', null, ['class' => 'form-control ' . ($errors->has('total_users_fgts') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o FGTS', 'maxlength' => '100']) }}
                                                 <small class="invalid-feedback">
                                                     {!! $errors->first('total_users_fgts') !!}
                                                 </small>
@@ -113,7 +113,7 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                {{ Form::label('label', 'Total de Usuários SIAP') }}:
+                                                {{ Form::label('label', 'Total de Usuários (SIAP)') }}:
                                                 {{ Form::text('total_users_siap', null, ['class' => 'form-control ' . ($errors->has('total_users_siap') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o SIAP', 'maxlength' => '100']) }}
                                                 <small class="invalid-feedback">
                                                     {!! $errors->first('total_users_siap') !!}
@@ -122,7 +122,7 @@
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                {{ Form::label('label', 'Total de Usuários Forças Armadas') }}:
+                                                {{ Form::label('label', 'Total de Usuários (FA)') }}:
                                                 {{ Form::text('total_users_military', null, ['class' => 'form-control ' . ($errors->has('total_users_military') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o Forças Armadas', 'maxlength' => '100']) }}
                                                 <small class="invalid-feedback">
                                                     {!! $errors->first('total_users_military') !!}
