@@ -92,6 +92,53 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                {{ Form::label('label', 'Total de usuários') }}:*
+                                                {{ Form::text('total_users', null, ['required', 'id' => 'total_users', 'class' => 'form-control ' . ($errors->has('total_users') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários', 'maxlength' => '15']) }}
+                                                <small class="invalid-feedback">
+                                                    {!! $errors->first('total_users') !!}
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                {{ Form::label('label', 'Total de Usuários FGTS') }}:
+                                                {{ Form::text('total_users_fgts', null, ['class' => 'form-control ' . ($errors->has('total_users_fgts') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o FGTS', 'maxlength' => '100', 'minlength' => '2']) }}
+                                                <small class="invalid-feedback">
+                                                    {!! $errors->first('total_users_fgts') !!}
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                {{ Form::label('label', 'Total de Usuários SIAP') }}:
+                                                {{ Form::text('total_users_siap', null, ['class' => 'form-control ' . ($errors->has('total_users_siap') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o SIAP', 'maxlength' => '100']) }}
+                                                <small class="invalid-feedback">
+                                                    {!! $errors->first('total_users_siap') !!}
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                {{ Form::label('label', 'Total de Usuários Forças Armadas') }}:
+                                                {{ Form::text('total_users_military', null, ['class' => 'form-control ' . ($errors->has('total_users_military') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o Forças Armadas', 'maxlength' => '100']) }}
+                                                <small class="invalid-feedback">
+                                                    {!! $errors->first('total_users_military') !!}
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                {{ Form::label('label', 'Data Expiração da Licença') }}:
+                                                {{ Form::date('license_end', null, ['class' => 'form-control ' . ($errors->has('license_end') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Nome do bairro', 'maxlength' => '100']) }}
+                                                <small class="invalid-feedback">
+                                                    {!! $errors->first('license_end') !!}
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <hr>
                                     <div class="col-md-12">
                                         <div class="form-group float-right">

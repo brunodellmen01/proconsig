@@ -47,7 +47,6 @@ class CompanyService
             'license_end' => $request['license_end'],
             'user_id' => $user->id,
             'address_id' => $adresses->id,
-            'date_cancell' => $request['date_cancell']
         ]);
     }
 }

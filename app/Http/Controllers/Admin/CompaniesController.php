@@ -158,8 +158,10 @@ class CompaniesController extends Controller
 
         if ($company->status_id = 1) {
             $company->status_id = 2;
+            $company->date_cancell = date('d/m/Y');
         } else {
             $company->status_id = 1;
+            $company->date_cancell = NULL;
         }
 
         if (!$company->save()) {

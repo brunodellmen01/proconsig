@@ -107,7 +107,7 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-md-8">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
                                                         {{ Form::label('label', 'Total de Usuários SIAP') }}:
                                                         {{ Form::text('total_users_siap', null, ['class' => 'form-control ' . ($errors->has('total_users_siap') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o SIAP', 'maxlength' => '100']) }}
@@ -116,7 +116,7 @@
                                                         </small>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4">
+                                                <div class="col-md-3">
                                                     <div class="form-group">
                                                         {{ Form::label('label', 'Total de Usuários Forças Armadas') }}:
                                                         {{ Form::text('total_users_military', null, ['class' => 'form-control ' . ($errors->has('total_users_military') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Digite o total de usuários para o Forças Armadas', 'maxlength' => '100']) }}
@@ -131,15 +131,6 @@
                                                         {{ Form::date('license_end', null, ['class' => 'form-control ' . ($errors->has('license_end') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Nome do bairro', 'maxlength' => '100']) }}
                                                         <small class="invalid-feedback">
                                                             {!! $errors->first('license_end') !!}
-                                                        </small>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        {{ Form::label('label', 'Data do Cancelamento') }}:
-                                                        {{ Form::date('date_cancell', null, ['class' => 'form-control ' . ($errors->has('date_cancell') ? ' is-invalid' : null), 'autocomplete' => 'off', 'placeholder' => 'Nome do date_cancello', 'maxlength' => '100']) }}
-                                                        <small class="invalid-feedback">
-                                                            {!! $errors->first('date_cancell') !!}
                                                         </small>
                                                     </div>
                                                 </div>
