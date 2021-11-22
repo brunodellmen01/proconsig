@@ -29,7 +29,7 @@ class StatusSeed extends Seeder
 		    ],
             [
                 'uuid' => Uuid::uuid4(),
-		        'name' => 'Demonstração',
+		        'name' => 'Testes',
 
 		    ],
 		]);

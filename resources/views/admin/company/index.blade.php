@@ -91,7 +91,7 @@
                                                 @elseif ($company->status_id == 2)
                                                 <td><span class="badge rounded-pill bg-danger float-end" key="t-new">{{ $company->status->name }}</span></td>
                                                 @elseif ($company->status_id == 3)
-                                                <td><span class="badge rounded-pill bg-info float-end" key="t-new">{{ $company->status->name }}</span></td>
+                                                <td><span class="badge rounded-pill bg-warning float-end" key="t-new">{{ $company->status->name }}</span></td>
                                                 @endif
                                                 <td>{{ formatDateToView($company->created_at) }}</td>
                                                 <td class="text-right">
