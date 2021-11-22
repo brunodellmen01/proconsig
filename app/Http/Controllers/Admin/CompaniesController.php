@@ -10,6 +10,7 @@ use App\Models\Companies;
 use App\Models\Status;
 use App\Services\CompanyService;
 use App\Support\Message;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -155,17 +156,13 @@ class CompaniesController extends Controller
     {
 
         $company = Companies::find($request->id);
-
-        if ($company->status_id = 1) {
+        if ($company->status_id = 1 || $company->status_id = 3) {
             $company->status_id = 2;
-            $company->date_cancell = date('Y/m/d');
-        }
-
-        if ($company->status_id = 2) {
+            $company->date_cancell = Carbon::now();
+        } else {
             $company->status_id = 1;
             $company->date_cancell = null;
         }
-
         if (!$company->save()) {
             $json['message'] = $this->message->info('Opss ocorreu um erro ao atualizar, por favor verifique todos os campos')->render();
             return response()->json($json);

@@ -60,7 +60,13 @@
                                                 <td>{{ $company->fantasy_name }}</td>
                                                 <td>{{ $company->responsible_name }}</td>
                                                 <td>{{ $company->email }}</td>
-                                                <td>{{ $company->status->name }}</td>
+                                                @if ($company->status_id == 1)
+                                                <td><span class="badge rounded-pill bg-success float-end" key="t-new">{{ $company->status->name }}</span></td>
+                                                @elseif ($company->status_id == 2)
+                                                <td><span class="badge rounded-pill bg-danger float-end" key="t-new">{{ $company->status->name }}</span></td>
+                                                @elseif ($company->status_id == 3)
+                                                <td><span class="badge rounded-pill bg-info float-end" key="t-new">{{ $company->status->name }}</span></td>
+                                                @endif
                                                 <td>{{ formatDateToView($company->created_at) }}</td>
                                                 <td class="text-right">
                                                     <a href="{{ url('admin/companies/edit', $company->uuid) }}"
