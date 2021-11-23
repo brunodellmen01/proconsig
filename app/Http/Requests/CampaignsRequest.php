@@ -4,8 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CompaniesRequest
- extends FormRequest
+class CampaignsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -32,14 +31,14 @@ class CompaniesRequest
             case 'POST': {
                     return [
 
-                        'name'        => 'required|string|min:3|max:150',
+                        'name'        => 'required|string|min:1|max:150',
                     ];
                 }
 
             case 'PUT':
             case 'PATCH': {
                     return [
-                        'name'        => 'required|string|min:3|max:150',
+                        'name'        => 'required|string|min:1|max:150',
                     ];
                 }
         }
@@ -49,7 +48,7 @@ class CompaniesRequest
     {
         return [
             'name.required' => 'O campo nome é obrigatório',
-            'name.min' => 'Minimo de 3 caracteres',
+            'name.min' => 'Minimo de 1 caracteres',
             'name.max' => 'Minimo de 150 caracteres',
         ];
     }

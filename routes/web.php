@@ -11,7 +11,7 @@ use App\Http\Controllers\Web\WebController;
  */
 
 use App\Http\Controllers\Admin\AuthController;
-use App\Http\Controllers\Admin\AdminSystemController;
+use App\Http\Controllers\Admin\CampaignsController;
 use App\Http\Controllers\Admin\CompaniesController;
 use App\Http\Controllers\Admin\DashController;
 use App\Http\Controllers\ContractsController;
@@ -72,6 +72,16 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'as' => 'admin.'], fu
         });
         /**
          * END empresa    */
+
+        //Inicio Rotas de campanha
+        Route::group(['prefix' => 'campaigns'], function () {
+            Route::get('/', [CampaignsController::class, 'index'])->name('campaigns.index');
+            Route::get('/create', [CampaignsController::class, 'create'])->name('campaigns.create');
+            Route::get('edit/{uuid}', [CampaignsController::class, 'edit'])->name('edit');
+            Route::post('edit/update', [CampaignsController::class, 'update'])->name('edit.update');
+            Route::post('/store', [CampaignsController::class, 'store'])->name('campaigns.store');
+        });
+        // Final Rotas de campanha
 
          /**
          * Rotas de contratos
