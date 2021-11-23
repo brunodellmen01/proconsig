@@ -41,10 +41,10 @@
                                                         id="auth-review-carousel">
                                                         <div class="item">
                                                             <div class="py-3">
-                                                                <p class="font-size-16 mb-4">Plataforma 100% & Web, o
-                                                                    Proconsig é uma plataforma web voltada 100% para
-                                                                    aumento de produtividade do seu callcenter ce
-                                                                    consignado, integrado com whatsapp discadoras e
+                                                                <p class="font-size-16 mb-4">Plataforma 100% em nuvem, o
+                                                                    Proconsig é uma plataforma online voltada para
+                                                                    aumento de produtividade do seu callcenter e
+                                                                    consignado, integrado com whatsapp, discadoras e
                                                                     outras ferramentas o que torna o sistema rápido,
                                                                     simples e eficáz!</p>
                                                             </div>

@@ -734,12 +734,11 @@
                             </div>
                         </div>
                     </div> <!-- end col -->
-
+                    <h2 class="text-center">Ranking por Campanha(s)</h2>
                     <div class="col-6">
                         <div class="card">
                             <div class="card-body">
-
-                                <h4 class="card-title">Ranking Produção Campanha</h4>
+                                <h4 class="card-title">Produção</h4>
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                         <tr>
@@ -766,7 +765,35 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="card-title">Ranking Pagos Campanha</h4>
+                                <h4 class="card-title">Pago</h4>
+                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
+                                    <thead>
+                                        <tr>
+                                            <th>Posição</th>
+                                            <th>Nome</th>
+                                            <th>Valor</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Edinburgh</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+
+                    <h2 class="text-center">Ranking por Operador(es)</h2>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <h4 class="card-title">Produção</h4>
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                         <tr>
@@ -793,34 +820,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <h4 class="card-title">Ranking Produção</h4>
-                                <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
-                                    <thead>
-                                        <tr>
-                                            <th>Posição</th>
-                                            <th>Nome</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                    </thead>
-
-
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Edinburgh</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div> <!-- end col -->
-
-                    <div class="col-6">
-                        <div class="card">
-                            <div class="card-body">
-
-                                <h4 class="card-title">Ranking Pagos</h4>
+                                <h4 class="card-title">Pago</h4>
                                 <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                                     <thead>
                                         <tr>
